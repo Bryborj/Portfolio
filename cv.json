@@ -1,0 +1,168 @@
+{
+  "basics": {
+    "name": "Bryan Albino Borges",
+    "label": "Aspirante a Full Stack Developer",
+    "image": "/me.webp",
+    "email": "bryanborjes@outlook.com",
+    "phone": "+52 2499992380",
+    "url": "https://facebook.com/brybor.sh",
+    "summary": "Sin experiencia laboral",
+    "location": {
+      "address": "",
+      "postalCode": "72000",
+      "city": "Puebla",
+      "countryCode": "MX",
+      "region": "Mexico"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ZbrySH",
+        "url": "https://www.linkedin.com/in/brybor-sh"
+      },
+      {
+        "network": "X",
+        "username": "ZbrySH",
+        "url": "https://x.com/brybor_sh"
+      },
+      {
+        "network": "GitHub",
+        "username": "ZbrySH",
+        "url": "https://github.com/Bryborj"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Bryan Albino Borges",
+      "position": "Estudiante de Ing. Cs. de la Computación",
+      "url": "https://facebook.com/brybor.sh",
+      "startDate": "2024-08-18",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "CBTis 254",
+      "url": "https://facebook.com/CBTISNo254",
+      "area": "Técnico en Programación", 
+      "studyType": "Matutino",
+      "startDate": "2021-08-18",
+      "endDate": "2024-08-18",
+      "score": "9",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Astro.js",
+      "level": "Medium",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Medium",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "React.js",
+      "level": "Medium",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Express.js",
+      "level": "Medium",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Medium",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish Mexican",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "LORD - Inventario Inteligente",
+      "isActive": true,
+      "description": "Aplicación con manejo de CRUD para un punto de venta con predicciones.",
+      "highlights": [
+        "Punto de venta",
+        "Preview"
+      ],
+      "url": "https://lord-ml.vercel.app/"
+    }
+  ]
+}
