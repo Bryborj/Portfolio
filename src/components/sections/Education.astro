@@ -8,11 +8,14 @@ import { education } from "@cv"
   <ul>
     {
       education.map(
-        ({ institution, startDate, endDate, area }) => {
+        ({ institution, startDate, endDate, area, courses }) => {
           const startYear = new Date(startDate).getFullYear()
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+            endDate != "" ? new Date(endDate).getFullYear() : "Actual"
           const years = `${startYear} - ${endYear}`
+          const courseList = courses
+            ? courses.map((course) => <li>• {course}</li>)
+            : null
 
           return (
             <li>
@@ -27,6 +30,7 @@ import { education } from "@cv"
 
                 <footer>
                   <p>{area}</p>
+                  {courseList && <div class="courses">{courseList}</div>}
                 </footer>
               </article>
             </li>
@@ -38,6 +42,12 @@ import { education } from "@cv"
 </Section>
 
 <style>
+.courses {
+    margin-top: 2px;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    color: #00000065;
+  }
   ul {
     display: flex;
     flex-direction: column;
