@@ -8,18 +8,23 @@ import { work } from "@cv"
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights }) => {
+        ({ name, startDate, endDate, position, summary, highlights, propietary }) => {
           const startYear = new Date(startDate).getFullYear()
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+            endDate != "" ? new Date(endDate).getFullYear() : "Actual"
           const years = `${startYear} - ${endYear}`
+          const Propietary = propietary ? " (Propietario)" : false
+          const highlightList = highlights
+            ? highlights.map((highlight) => <li>• {highlight}</li>)
+            : null
 
           return (
             <li>
               <article>
                 <header>
                   <div>
-                    <h3>{name}</h3>
+                    <h3>{name}{Propietary && <span class="prop">{Propietary}</span>}</h3>
+                    
                     <h4>{position}</h4>
                   </div>
 
@@ -28,6 +33,7 @@ import { work } from "@cv"
 
                 <footer>
                   <p>{summary}</p>
+                  {highlightList && <div class="highlights">{highlightList}</div>}
                 </footer>
               </article>
             </li>
@@ -39,6 +45,16 @@ import { work } from "@cv"
 </Section>
 
 <style>
+  .prop {
+    font-size: 0.85rem;
+    color: #00000065;
+  }
+  .highlights {
+    margin-top: 2px;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    color: #00000065;
+  }
   ul {
     display: flex;
     flex-direction: column;
