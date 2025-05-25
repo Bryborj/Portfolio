@@ -6,7 +6,7 @@
     "email": "bryanborjes@outlook.com",
     "phone": "+52 2499992380",
     "url": "https://facebook.com/brybor.sh",
-    "summary": "Sin experiencia laboral",
+    "summary": "Con poca experiencia en el desarrollo de aplicaciones web, pero con muchas ganas de aprender y crecer en el área. Buscando una oportunidad para demostrar mis habilidades y contribuir a un equipo de trabajo.",
     "location": {
       "address": "",
       "postalCode": "72000",
@@ -34,14 +34,27 @@
   },
   "work": [
     {
-      "name": "Bryan Albino Borges",
-      "position": "Estudiante de Ing. Cs. de la Computación",
+      "name": "ZONA_SH",
+      "position": "Web Developer",
       "url": "https://facebook.com/brybor.sh",
-      "startDate": "2024-08-18",
+      "startDate": "2018-08-18",
+      "endDate": "",
+      "summary": "Desarrollo de aplicaciones web, así como la implementación de soluciones tecnológicas para mejorar la eficiencia y productividad de los procesos empresariales.",
+      "propietary": true,
+      "highlights": [
+        "CEO y Fundador de ZONA_SH"
+      ]
+    },
+    {
+      "name": "Castores Trucking",
+      "position": "Developer Team",
+      "url": "https://castorestrucking.com",
+      "startDate": "2025-05-20",
       "endDate": "",
       "summary": "",
+      "propietary": false,
       "highlights": [
-        "Started the company"
+        "Soporte"
       ]
     }
   ],
@@ -55,7 +68,22 @@
       "endDate": "2024-08-18",
       "score": "9",
       "courses": [
-        "DB1101 - Basic SQL"
+        "Desarrollo de Aplicaciones Web",
+        "Desarrollo de Aplicaciones Móviles",
+        "Programación de Sistemas",
+        "Robotica"
+      ]
+    },
+    {
+      "institution": "BUAP",
+      "url": "https://buap.mx",
+      "area": "Ing. Cs. Computacionales", 
+      "studyType": "Matutino",
+      "startDate": "2021-08-18",
+      "endDate": "",
+      "score": "9",
+      "courses": [
+        "AWS Machine Learning"
       ]
     }
   ],
@@ -130,6 +158,61 @@
         "Colaboración",
         "Código Fuente"
       ]
+    },
+    {
+      "name": "Node.js",
+      "level": "Medium",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend"
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "level": "Medium",
+      "keywords": [
+        "Base de Datos",
+        "NoSQL"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Medium",
+      "keywords": [
+        "Base de Datos",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Clerk.dev",
+      "level": "Medium",
+      "keywords": [
+        "Autenticación",
+        "Seguridad"
+      ]
+    },
+    {
+      "name": "Vercel",
+      "level": "Medium",
+      "keywords": [
+        "Despliegue",
+        "Hosting"
+      ]
+    },
+    {
+      "name": "AWS - ML",
+      "level": "Basic",
+      "keywords": [
+        "Cloud Computing",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Medium",
+      "keywords": [
+        "Diseño UI/UX"
+      ]
     }
   ],
   "languages": [
@@ -160,9 +243,32 @@
       "description": "Aplicación con manejo de CRUD para un punto de venta con predicciones.",
       "highlights": [
         "Punto de venta",
+        "Preview",
+        "Credenciales: User:admin@lord.com, Pass:admin"
+      ],
+      "url": "https://lord-ml.vercel.app/login"
+    },
+    {
+      "name": "Portafolio",
+      "isActive": true,
+      "description": "Portafolio personal con información sobre mí y mis proyectos.",
+      "highlights": [
+        "Portafolio",
+        "Curriculum",
         "Preview"
       ],
-      "url": "https://lord-ml.vercel.app/"
+      "url": "https://zona-sh-portfolio.vercel.app/"
+    },
+    {
+      "name": "My Mind",
+      "isActive": true,
+      "description": "Aplicación para tomar notas con manejo de CRUD y autenticación con Clerk.",
+      "highlights": [
+        "Notas",
+        "Herramienta de Productividad",
+        "Preview"
+      ],
+      "url": "https://my-mind-vert.vercel.app/"
     }
   ]
 }
