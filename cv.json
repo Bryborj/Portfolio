@@ -34,7 +34,7 @@
   },
   "work": [
     {
-      "name": "ZONA_SH",
+      "name": "Z-SH SOLUTIONS",
       "position": "Web Developer",
       "url": "https://facebook.com/brybor.sh",
       "startDate": "2018-08-18",
@@ -42,7 +42,7 @@
       "summary": "Desarrollo de aplicaciones web, así como la implementación de soluciones tecnológicas para mejorar la eficiencia y productividad de los procesos empresariales.",
       "propietary": true,
       "highlights": [
-        "CEO y Fundador de ZONA_SH"
+        "CEO y Fundador de Z-SH SOLUTIONS"
       ]
     },
     {
@@ -50,7 +50,7 @@
       "position": "Developer Team",
       "url": "https://castorestrucking.com",
       "startDate": "2025-05-20",
-      "endDate": "",
+      "endDate": "2025-07-04",
       "summary": "",
       "propietary": false,
       "highlights": [
@@ -97,10 +97,10 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "Curso de Desarrollo de Apps Móviles",
+      "date": "2024-03-13",
+      "issuer": "Google",
+      "url": "https://drive.google.com/file/d/1oCpgNXQCTu_FwGLyrFSuqOFaeAYvH4No/view?usp=sharing"
     }
   ],
   "publications": [
@@ -197,21 +197,6 @@
       "keywords": [
         "Despliegue",
         "Hosting"
-      ]
-    },
-    {
-      "name": "AWS - ML",
-      "level": "Basic",
-      "keywords": [
-        "Cloud Computing",
-        "Machine Learning"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Medium",
-      "keywords": [
-        "Diseño UI/UX"
       ]
     }
   ],
