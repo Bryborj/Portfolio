@@ -8,12 +8,13 @@ import { projects } from "@cv"
   <ul>
     {
       projects.map(({ url, description, highlights, name, isActive }) => {
+        const thisurl = isActive ? url : "/magnament";
         return (
           <li>
             <article>
               <header>
                 <h3>
-                  <a href={url}
+                  <a href={thisurl}
                   title={`Ver el proyecto ${name}`}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -7,24 +7,19 @@ import { certificates } from "@cv";
 <Section title="Certificados">
   <ul>
     {
-      certificates.map(({ name, date, issuer, url }) => {
+      certificates.map(({ name, date, issuer, url}) => {
+        const startYear = date != "" ? new Date(date).getFullYear() : "En curso";
         return (
           <li>
             <article>
               <header>
-                <h3>
-                  <a 
-                    href={url} 
-                    title={`Ver el certificado ${name}`}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    {name}
-                  </a>
-                </h3>
-                <p>{issuer}</p>
+                <div>
+                  <h3>{issuer}</h3>
+                </div>
+                <time>{startYear}</time>
               </header>
               <footer>
-                <span>{date}</span>
+                <p><a href={url}>{name}</a></p>
               </footer>
             </article>
           </li>
@@ -36,61 +31,31 @@ import { certificates } from "@cv";
 
 <style>
   ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-inline: -16px;
-  }
-
-  article {
-    border-radius: 8px;
-    border: 1px solid #f2f2f2;
-    gap: 16px;
-    display: flex;
+    display:flex;
     flex-direction: column;
-    padding: 16px;
-    height: 100%;
-  }
-
-  article header {
-    flex: 1;
+    gap: 32px;
   }
 
   article h3 {
-    margin-bottom: 4px;
-  }
-
-  article a {
+    font-weight: 500;
     color: #111;
   }
 
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article p {
-    font-size: 0.75rem;
-    line-height: 1.2rem;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 4px;
   }
 
-  article h3 span {
-    color: rgb(0, 188, 47);
+  time {
+    color: #555;
+    font-size: 0.85rem;
   }
-
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
-  }
-
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
+  a {
+    color: #111;
+    }
+  a:hover {
+    text-decoration: underline;
   }
 </style>

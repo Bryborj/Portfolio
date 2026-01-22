@@ -1,10 +1,10 @@
 {
   "basics": {
     "name": "Bryan Albino Borges",
-    "label": "Aspirante a Full Stack Developer",
+    "label": "Tec. Programación y Est. Ing. Cs. de la Computación @BUAP",
     "image": "/me.webp",
     "email": "bryanborjes@outlook.com",
-    "phone": "+52 2499992380",
+    "phone": "+52 2202139508",
     "url": "https://facebook.com/brybor.sh",
     "summary": "Con poca experiencia en el desarrollo de aplicaciones web, pero con muchas ganas de aprender y crecer en el área. Buscando una oportunidad para demostrar mis habilidades y contribuir a un equipo de trabajo.",
     "location": {
@@ -44,18 +44,6 @@
       "highlights": [
         "CEO y Fundador de Z-SH SOLUTIONS"
       ]
-    },
-    {
-      "name": "Castores Trucking",
-      "position": "Developer Team",
-      "url": "https://castorestrucking.com",
-      "startDate": "2025-05-20",
-      "endDate": "2025-07-04",
-      "summary": "",
-      "propietary": false,
-      "highlights": [
-        "Soporte"
-      ]
     }
   ],
   "education": [
@@ -83,7 +71,6 @@
       "endDate": "",
       "score": "9",
       "courses": [
-        "AWS Machine Learning"
       ]
     }
   ],
@@ -101,6 +88,12 @@
       "date": "2024-03-13",
       "issuer": "Google",
       "url": "https://drive.google.com/file/d/1oCpgNXQCTu_FwGLyrFSuqOFaeAYvH4No/view?usp=sharing"
+    },
+    {
+      "name": "Introducción a la Ciencia de Datos",
+      "date": "",
+      "issuer": "Santander",
+      "url": "/none"
     }
   ],
   "publications": [
@@ -246,7 +239,7 @@
     },
     {
       "name": "My Mind",
-      "isActive": true,
+      "isActive": false,
       "description": "Aplicación para tomar notas con manejo de CRUD y autenticación con Clerk.",
       "highlights": [
         "Notas",
