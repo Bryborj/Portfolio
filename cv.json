@@ -217,7 +217,7 @@
   "projects": [
     {
       "name": "LORD - Inventario Inteligente",
-      "isActive": true,
+      "isActive": false,
       "description": "Aplicación con manejo de CRUD para un punto de venta con predicciones.",
       "highlights": [
         "Punto de venta",
@@ -247,6 +247,27 @@
         "Preview"
       ],
       "url": "https://my-mind-vert.vercel.app/"
+    },
+    {
+      "name": "Semi-Code Analyser",
+      "isActive": true,
+      "description": "Pagina web para visualizar las estructura basica de los semicondictores a partir de los elementos somo Si y Boro.",
+      "highlights": [
+        "Fisica", 
+        "Circuitos Electronicos",
+        "BUAP"
+      ],
+      "url": "https://semi-code-analyzer.vercel.app/"
+    },
+    {
+      "name": "Visualizador de plan de estudios",
+      "isActive": true,
+      "description": "Visualizador grafico para planes de estudio BUAP. Funciona a travez de un JSON",
+      "highlights": [
+        "BUAP",
+        "Hobbie"
+      ],
+      "url": "https://vizualizador-plan-de-estudios.vercel.app/"
     }
   ]
 }
