@@ -19,16 +19,32 @@ import { skills } from "@cv"
 <style>
   ul {
     display: inline-flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
   }
 
   li {
-    border-radius: 6px;
-    background: #eee;
-    color: black;
+    border-radius: 8px;
+    background: var(--badge-bg);
+    color: var(--badge-text);
     font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+  }
+
+  li:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+  }
+
+  @media print {
+    li {
+      border: 1px solid #ddd;
+      box-shadow: none;
+      transform: none;
+    }
   }
 </style>
