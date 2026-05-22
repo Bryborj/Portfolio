@@ -1,0 +1,94 @@
+---
+import { basics } from "@cv"
+
+const { profiles } = basics
+const githubInfo = profiles.find(({ network }) => network === "GitHub")
+const githubUrl = githubInfo?.url || "https://github.com/Bryborj"
+---
+
+<nav class="navbar no-print">
+  <div class="nav-content">
+    <a href="#inicio" class="logo">
+      <span class="gradient-text">BRY</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li>
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="github-btn">
+          GitHub
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+  }
+
+  .nav-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-blue);
+  }
+
+  .github-btn {
+    background: var(--gradient-primary);
+    color: white !important;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .github-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  }
+
+  @media (max-width: 600px) {
+    .nav-links {
+      gap: 1rem;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+    }
+  }
+</style>

@@ -29,16 +29,25 @@ const { image, summary } = basics
 
 <style is:global>
   :root {
-    --bg-color: #0d1117;
-    --text-primary: #e6edf3;
-    --text-secondary: #8b949e;
-    --accent: #58a6ff;
-    --accent-hover: #3182ce;
-    --border-color: #30363d;
-    --card-bg: #161b22;
-    --card-hover: #21262d;
-    --badge-bg: #1f2428;
-    --badge-text: #58a6ff;
+    --bg-color: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    
+    /* Favorite colors */
+    --accent-blue: #3b82f6;
+    --accent-red: #ef4444;
+    --accent-purple: #8b5cf6;
+    
+    --accent: var(--accent-purple);
+    --accent-hover: var(--accent-blue);
+    
+    --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-red));
+    
+    --border-color: #27272a;
+    --card-bg: #18181b;
+    --card-hover: #27272a;
+    --badge-bg: #27272a;
+    --badge-text: #e4e4e7;
   }
 
   @media print {
@@ -53,7 +62,16 @@ const { image, summary } = basics
       --card-hover: #ffffff;
       --badge-bg: #f3f4f6;
       --badge-text: #111111;
+      --gradient-primary: none;
     }
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 
   html {

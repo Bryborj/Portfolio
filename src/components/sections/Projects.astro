@@ -4,14 +4,24 @@ import Section from "../Section.astro"
 import { projects } from "@cv"
 ---
 
-<Section title="Proyectos">
+<Section title="Proyectos" id="proyectos">
   <ul>
     {
       projects.map(({ url, description, highlights, name, isActive }) => {
         const thisurl = isActive ? url : "/magnament";
+        const previewUrl = isActive ? `https://image.thum.io/get/width/600/crop/800/${url}` : '/preview-placeholder.jpg';
         return (
           <li>
             <article>
+              <a href={thisurl} target="_blank" rel="noopener noreferrer" class="preview-link">
+                <div class="image-container">
+                  {isActive ? (
+                    <img src={previewUrl} alt={`Vista previa de ${name}`} loading="lazy" />
+                  ) : (
+                    <div class="placeholder-preview gradient-text">Sin Vista Previa</div>
+                  )}
+                </div>
+              </a>
               <header>
                 <h3>
                   <a href={thisurl}
@@ -41,8 +51,8 @@ import { projects } from "@cv"
 <style>
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-inline: -16px;
   }
 
@@ -57,6 +67,7 @@ import { projects } from "@cv"
     height: 100%;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
 
   article:hover {
@@ -64,6 +75,46 @@ import { projects } from "@cv"
     border-color: var(--accent);
     box-shadow: 0 8px 24px rgba(88, 166, 255, 0.1);
     background: var(--card-hover);
+  }
+
+  .preview-link {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 160px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+  }
+
+  article:hover .image-container img {
+    transform: scale(1.05);
+  }
+
+  .placeholder-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: #111;
   }
 
   article header {
@@ -130,6 +181,9 @@ import { projects } from "@cv"
     article:hover {
       transform: none;
       box-shadow: none;
+    }
+    .preview-link {
+      display: none;
     }
   }
 </style>

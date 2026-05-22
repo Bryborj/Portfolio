@@ -1,5 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro"
+import Navbar from "@/components/Navbar.astro"
+import Footer from "@/components/Footer.astro"
 
 import About from "@/components/sections/About.astro"
 import Education from "@/components/sections/Education.astro"
@@ -15,6 +17,7 @@ const { name, label } = basics
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
+  <Navbar />
   <main>
     <Hero />
     <About />
@@ -24,14 +27,16 @@ const { name, label } = basics
     <Projects />
     <Skills />
   </main>
+  <Footer />
 
   <KeyboardManager />
 </Layout>
 
 <style>
   main {
-    padding: 4rem;
+    padding: 6rem 2rem 2rem 2rem;
     margin: auto;
     width: 100%;
+    max-width: 800px;
   }
 </style>

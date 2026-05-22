@@ -1,0 +1,30 @@
+---
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="main-footer no-print">
+  <div class="footer-content">
+    <p>&copy; {currentYear} Bryan Borges. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<style>
+  .main-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+    background: var(--bg-color);
+  }
+
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+</style>
