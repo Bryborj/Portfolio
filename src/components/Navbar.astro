@@ -1,9 +1,10 @@
 ---
-import { basics } from "@cv"
+import GitHub from "@/icons/GitHub.astro";
+import { basics } from "@cv";
 
-const { profiles } = basics
-const githubInfo = profiles.find(({ network }) => network === "GitHub")
-const githubUrl = githubInfo?.url || "https://github.com/Bryborj"
+const { profiles } = basics;
+const githubInfo = profiles.find(({ network }) => network === "GitHub");
+const githubUrl = githubInfo?.url || "https://github.com/Bryborj";
 ---
 
 <nav class="navbar no-print">
@@ -16,8 +17,13 @@ const githubUrl = githubInfo?.url || "https://github.com/Bryborj"
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li>
-        <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="github-btn">
-          GitHub
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-btn"
+        >
+          <GitHub />
         </a>
       </li>
     </ul>
@@ -70,12 +76,12 @@ const githubUrl = githubInfo?.url || "https://github.com/Bryborj"
   }
 
   .github-btn {
-    background: var(--gradient-primary);
-    color: white !important;
+    background: transparent;
     padding: 0.4rem 1rem;
     border-radius: 20px;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .github-btn:hover {
