@@ -1,33 +1,49 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
 
-import { projects } from "@cv"
+import { projects } from "@cv";
 ---
 
 <Section title="Proyectos" id="proyectos">
   <ul>
     {
       projects.map(({ url, description, highlights, name, isActive }) => {
-        const thisurl = isActive ? url : "/magnament";
-        const previewUrl = isActive ? `https://image.thum.io/get/width/600/crop/800/${url}` : '/preview-placeholder.jpg';
+        const thisurl = isActive
+          ? url
+          : "zona-sh-portfolio.vercel.app/magnament";
+        const previewUrl = isActive
+          ? `https://image.thum.io/get/width/600/crop/800/${url}`
+          : "/preview-placeholder.jpg";
         return (
           <li>
             <article>
-              <a href={thisurl} target="_blank" rel="noopener noreferrer" class="preview-link">
+              <a
+                href={thisurl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="preview-link"
+              >
                 <div class="image-container">
                   {isActive ? (
-                    <img src={previewUrl} alt={`Vista previa de ${name}`} loading="lazy" />
+                    <img
+                      src={previewUrl}
+                      alt={`Vista previa de ${name}`}
+                      loading="lazy"
+                    />
                   ) : (
-                    <div class="placeholder-preview gradient-text">Sin Vista Previa</div>
+                    <div class="placeholder-preview gradient-text">
+                      Sin Vista Previa
+                    </div>
                   )}
                 </div>
               </a>
               <header>
                 <h3>
-                  <a href={thisurl}
-                  title={`Ver el proyecto ${name}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  <a
+                    href={thisurl}
+                    title={`Ver el proyecto ${name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {name}
                   </a>
@@ -37,12 +53,12 @@ import { projects } from "@cv"
               </header>
               <footer>
                 {highlights.map((highlight) => {
-                  return <span>{highlight}</span>
+                  return <span>{highlight}</span>;
                 })}
               </footer>
             </article>
           </li>
-        )
+        );
       })
     }
   </ul>
@@ -149,9 +165,15 @@ import { projects } from "@cv"
   }
 
   @keyframes pulse {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.5; }
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
   }
 
   footer {
