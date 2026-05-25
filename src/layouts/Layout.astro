@@ -29,8 +29,8 @@ const { image, summary } = basics
 
 <style is:global>
   :root {
-    --bg-color: #0a0a0a;
-    --text-primary: #ffffff;
+    --bg-color: #000000;
+    --text-primary: #f8fafc;
     --text-secondary: #a1a1aa;
     
     /* Favorite colors */
@@ -42,11 +42,12 @@ const { image, summary } = basics
     --accent-hover: var(--accent-blue);
     
     --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-red));
+    --gradient-glow: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
     
-    --border-color: #27272a;
-    --card-bg: #18181b;
-    --card-hover: #27272a;
-    --badge-bg: #27272a;
+    --border-color: transparent;
+    --card-bg: #09090b;
+    --card-hover: #18181b;
+    --badge-bg: #18181b;
     --badge-text: #e4e4e7;
   }
 
@@ -63,6 +64,7 @@ const { image, summary } = basics
       --badge-bg: #f3f4f6;
       --badge-text: #111111;
       --gradient-primary: none;
+      --gradient-glow: none;
     }
   }
 

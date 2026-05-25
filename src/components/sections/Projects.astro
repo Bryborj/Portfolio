@@ -8,9 +8,7 @@ import { projects } from "@cv";
   <ul>
     {
       projects.map(({ url, description, highlights, name, isActive }) => {
-        const thisurl = isActive
-          ? url
-          : "zona-sh-portfolio.vercel.app/magnament";
+        const thisurl = isActive ? url : "/magnament";
         const previewUrl = isActive
           ? `https://image.thum.io/get/width/600/crop/800/${url}`
           : "/preview-placeholder.jpg";
@@ -73,41 +71,35 @@ import { projects } from "@cv";
   }
 
   article {
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid var(--border-color);
     background: var(--card-bg);
-    gap: 16px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     height: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
   }
 
   article:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: 0 8px 24px rgba(88, 166, 255, 0.1);
-    background: var(--card-hover);
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.15);
   }
 
   .preview-link {
     display: block;
-    border-radius: 8px;
+    width: 100%;
     overflow: hidden;
-    margin-bottom: 8px;
   }
 
   .image-container {
     width: 100%;
-    height: 160px;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
+    height: 180px;
+    background: #000;
     position: relative;
+    border-bottom: 1px solid var(--border-color);
   }
 
   .image-container img {
@@ -115,11 +107,11 @@ import { projects } from "@cv";
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: transform 0.3s ease;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
   article:hover .image-container img {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 
   .placeholder-preview {
@@ -135,11 +127,14 @@ import { projects } from "@cv";
 
   article header {
     flex: 1;
+    padding: 20px 20px 0 20px;
   }
 
   article h3 {
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
   }
 
   article a {
@@ -152,27 +147,27 @@ import { projects } from "@cv";
   }
 
   article p {
-    font-size: 0.85rem;
-    line-height: 1.4rem;
-    margin-bottom: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 0;
     color: var(--text-secondary);
   }
 
   article h3 span {
     color: #3fb950;
     margin-left: 6px;
-    animation: pulse 2s infinite ease-in-out;
+    animation: pulse 2.5s infinite ease-in-out;
   }
 
   @keyframes pulse {
     0% {
-      opacity: 0.5;
+      opacity: 0.4;
     }
     50% {
       opacity: 1;
     }
     100% {
-      opacity: 0.5;
+      opacity: 0.4;
     }
   }
 
@@ -180,17 +175,18 @@ import { projects } from "@cv";
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    font-size: 0.7rem;
-    margin-top: 12px;
+    font-size: 0.75rem;
+    padding: 20px;
+    margin-top: auto;
   }
 
   footer span {
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--badge-bg);
     color: var(--badge-text);
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
     border: 1px solid var(--border-color);
   }
 
