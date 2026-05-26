@@ -76,6 +76,14 @@ const { image, summary } = basics
     color: transparent;
   }
 
+  @media print {
+    .gradient-text {
+      background: none !important;
+      -webkit-text-fill-color: #000 !important;
+      color: #000 !important;
+    }
+  }
+
   html {
     font-family:
       "Inter",

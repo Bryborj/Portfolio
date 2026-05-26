@@ -10,7 +10,7 @@ const githubUrl = githubInfo?.url || "https://github.com/Bryborj";
 <nav class="navbar no-print">
   <div class="nav-content">
     <a href="#inicio" class="logo">
-      <span class="gradient-text">BRY</span>
+      <span class="gradient-text">brybor</span><span class="extension">.sh<span class="cursor">_</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
@@ -56,6 +56,25 @@ const githubUrl = githubInfo?.url || "https://github.com/Bryborj";
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -1px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .extension {
+    color: var(--accent-blue);
+    font-weight: 900;
+  }
+
+  .cursor {
+    color: var(--accent-purple);
+    animation: blink 1s step-end infinite;
+    font-weight: 900;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
 
   .nav-links {
