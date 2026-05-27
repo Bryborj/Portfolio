@@ -1,8 +1,8 @@
 ---
-import { type SocialIcon } from "@/types"
-import { basics } from "@cv"
+import { type SocialIcon } from "@/types";
+import { basics } from "@cv";
 
-const { profiles } = basics
+const { profiles } = basics;
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub: `<svg
@@ -39,11 +39,11 @@ const SOCIAL_ICONS: SocialIcon = {
   ></path></svg
 >
 `,
-}
+};
 
 const profilesInfo = profiles.map(({ network, url }) => {
-  const icon = SOCIAL_ICONS[network]
-  const firstLetter = network[0].toUpperCase()
+  const icon = SOCIAL_ICONS[network];
+  const firstLetter = network[0].toUpperCase();
 
   return {
     id: network,
@@ -52,8 +52,8 @@ const profilesInfo = profiles.map(({ network, url }) => {
     url,
     icon,
     hotkey: `ctrl+${firstLetter}`,
-  }
-})
+  };
+});
 ---
 
 <footer class="no-print">
@@ -66,22 +66,22 @@ const profilesInfo = profiles.map(({ network, url }) => {
   hideBreadcrumbs></ninja-keys>
 
 <script>
-  import "ninja-keys"
+  import "ninja-keys";
 
   interface Info {
-    id: string
-    section: string
-    title: string
-    url: string
-    icon: string
-    hotkey: string
+    id: string;
+    section: string;
+    title: string;
+    url: string;
+    icon: string;
+    hotkey: string;
   }
 
-  const ninja = document.querySelector("ninja-keys")
+  const ninja = document.querySelector("ninja-keys");
 
   if (ninja != null) {
-    const info = ninja.getAttribute("data-info") ?? "[]"
-    const parsedInfo = JSON.parse(info)
+    const info = ninja.getAttribute("data-info") ?? "[]";
+    const parsedInfo = JSON.parse(info);
 
     const data = parsedInfo.map(
       ({ url, hotkey, icon, id, section, title }: Info) => {
@@ -92,11 +92,11 @@ const profilesInfo = profiles.map(({ network, url }) => {
           hotkey,
           section,
           handler: () => {
-            window.open(url, "_blank")
+            window.open(url, "_blank");
           },
-        }
-      }
-    )
+        };
+      },
+    );
 
     ninja.data = [
       {
@@ -108,11 +108,11 @@ const profilesInfo = profiles.map(({ network, url }) => {
         hotkey: "ctrl+P",
         section: "Acciones",
         handler: () => {
-          window.print()
+          window.print();
         },
       },
       ...data,
-    ]
+    ];
   }
 </script>
 
@@ -121,6 +121,16 @@ const profilesInfo = profiles.map(({ network, url }) => {
     ninja-keys {
       display: none !important;
     }
+  }
+
+  ninja-keys {
+    --ninja-modal-background: var(--card-bg);
+    --ninja-text-color: var(--text-primary);
+    --ninja-selected-background: var(--card-hover);
+    --ninja-accent-color: var(--accent);
+    --ninja-secondary-background-color: var(--bg-color);
+    --ninja-secondary-text-color: var(--text-secondary);
+    --ninja-icon-color: var(--text-secondary);
   }
 
   @keyframes fadeIn {
@@ -133,14 +143,16 @@ const profilesInfo = profiles.map(({ network, url }) => {
   }
 
   footer {
-    background: #fdfdfd;
-    border-top: 1px solid #eee;
+    background: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
     position: fixed;
     bottom: 0px;
     width: 100%;
-    padding-block: 8px;
+    padding-block: 12px;
     text-align: center;
     font-size: 0.85rem;
+    z-index: 100;
 
     view-timeline-name: --revealing;
     view-timeline-axis: block;
@@ -151,9 +163,12 @@ const profilesInfo = profiles.map(({ network, url }) => {
   }
 
   kbd {
-    background: #eee;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     border-radius: 4px;
-    padding: 2px 4px;
+    padding: 3px 6px;
     font-size: 12px;
+    font-weight: 600;
   }
 </style>
