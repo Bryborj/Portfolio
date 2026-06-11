@@ -2,6 +2,7 @@
 import Section from "../Section.astro";
 
 import { projects } from "@cv";
+import { getThumURL } from "thum.io";
 ---
 
 <Section title="Proyectos" id="proyectos">
@@ -10,7 +11,7 @@ import { projects } from "@cv";
       projects.map(({ url, description, highlights, name, isActive }) => {
         const thisurl = isActive ? url : "/magnament";
         const previewUrl = isActive
-          ? `https://image.thum.io/get/width/600/crop/800/${url}`
+          ? getThumURL({ url, width: 600, crop: 800, protocol: "https" })
           : "/preview-placeholder.jpg";
         return (
           <li>
