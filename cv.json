@@ -228,6 +228,13 @@
       "description": "Visualizador grafico para planes de estudio BUAP. Funciona a travez de un JSON",
       "highlights": ["BUAP", "Hobbie"],
       "url": "https://vizualizador-plan-de-estudios.vercel.app/"
+    },
+    {
+      "name": "Castores Trucking",
+      "isActive": true,
+      "description": "VTC Mexiana de Trukers MP, pagina web para el enfasis de la empresa virtual de camiones del videojuego ATS y ETS2",
+      "highlights": ["ETS2", "ATS", "VTuber"],
+      "url": "https://castorestrucking.com.mx"
     }
   ]
 }
