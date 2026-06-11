@@ -41,8 +41,18 @@
       "endDate": "",
       "summary": "Desarrollo de aplicaciones web, así como la implementación de soluciones tecnológicas para mejorar la eficiencia y productividad de los procesos empresariales.",
       "propietary": true,
+      "highlights": ["CEO y Fundador de Z-SH SOLUTIONS"]
+    },
+    {
+      "name": "Castores Trucking",
+      "position": "Web Developer",
+      "url": "https://castorestrucking.com.mx",
+      "startDate": "2025-03-10",
+      "endDate": "",
+      "summary": "Desarrollo de aplicaciones web, así como la implementación de soluciones tecnológicas para mejorar la eficiencia y productividad de los procesos empresariales.",
       "highlights": [
-        "CEO y Fundador de Z-SH SOLUTIONS"
+        "Desarrollo de aplicaciones web",
+        "Implementación de soluciones tecnológicas"
       ]
     }
   ],
@@ -50,7 +60,7 @@
     {
       "institution": "CBTis 254",
       "url": "https://facebook.com/CBTISNo254",
-      "area": "Técnico en Programación", 
+      "area": "Técnico en Programación",
       "studyType": "Matutino",
       "startDate": "2021-08-18",
       "endDate": "2024-08-18",
@@ -65,13 +75,12 @@
     {
       "institution": "BUAP",
       "url": "https://buap.mx",
-      "area": "Ing. Cs. de la Computación", 
+      "area": "Ing. Cs. de la Computación",
       "studyType": "Matutino",
       "startDate": "2021-08-18",
       "endDate": "",
       "score": "9",
-      "courses": [
-      ]
+      "courses": []
     }
   ],
   "awards": [
@@ -109,29 +118,17 @@
     {
       "name": "Astro.js",
       "level": "Medium",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
       "name": "Tailwind",
       "level": "Medium",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "Diseño Responsive"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
       "name": "React.js",
       "level": "Medium",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
       "name": "Express.js",
@@ -146,51 +143,32 @@
     {
       "name": "Git",
       "level": "Medium",
-      "keywords": [
-        "Control de Versiones",
-        "Colaboración",
-        "Código Fuente"
-      ]
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
     },
     {
       "name": "Node.js",
       "level": "Medium",
-      "keywords": [
-        "Desarrollo Web",
-        "Backend"
-      ]
+      "keywords": ["Desarrollo Web", "Backend"]
     },
     {
       "name": "MongoDB",
       "level": "Medium",
-      "keywords": [
-        "Base de Datos",
-        "NoSQL"
-      ]
+      "keywords": ["Base de Datos", "NoSQL"]
     },
     {
       "name": "MySQL",
       "level": "Medium",
-      "keywords": [
-        "Base de Datos",
-        "SQL"
-      ]
+      "keywords": ["Base de Datos", "SQL"]
     },
     {
       "name": "Clerk.dev",
       "level": "Medium",
-      "keywords": [
-        "Autenticación",
-        "Seguridad"
-      ]
+      "keywords": ["Autenticación", "Seguridad"]
     },
     {
       "name": "Vercel",
       "level": "Medium",
-      "keywords": [
-        "Despliegue",
-        "Hosting"
-      ]
+      "keywords": ["Despliegue", "Hosting"]
     }
   ],
   "languages": [
@@ -202,10 +180,7 @@
   "interests": [
     {
       "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
+      "keywords": ["Ferrets", "Unicorns"]
     }
   ],
   "references": [
@@ -230,43 +205,28 @@
       "name": "Portafolio",
       "isActive": true,
       "description": "Portafolio personal con información sobre mí y mis proyectos.",
-      "highlights": [
-        "Portafolio",
-        "Curriculum",
-        "Preview"
-      ],
+      "highlights": ["Portafolio", "Curriculum", "Preview"],
       "url": "https://zona-sh-portfolio.vercel.app/"
     },
     {
       "name": "My Mind",
       "isActive": false,
       "description": "Aplicación para tomar notas con manejo de CRUD y autenticación con Clerk.",
-      "highlights": [
-        "Notas",
-        "Herramienta de Productividad",
-        "Preview"
-      ],
+      "highlights": ["Notas", "Herramienta de Productividad", "Preview"],
       "url": "https://my-mind-vert.vercel.app/"
     },
     {
       "name": "Semi-Code Analyser",
       "isActive": true,
       "description": "Pagina web para visualizar las estructura basica de los semicondictores a partir de los elementos somo Si y Boro.",
-      "highlights": [
-        "Fisica", 
-        "Circuitos Electronicos",
-        "BUAP"
-      ],
+      "highlights": ["Fisica", "Circuitos Electronicos", "BUAP"],
       "url": "https://semi-code-analyzer.vercel.app/"
     },
     {
       "name": "Visualizador de plan de estudios",
       "isActive": true,
       "description": "Visualizador grafico para planes de estudio BUAP. Funciona a travez de un JSON",
-      "highlights": [
-        "BUAP",
-        "Hobbie"
-      ],
+      "highlights": ["BUAP", "Hobbie"],
       "url": "https://vizualizador-plan-de-estudios.vercel.app/"
     }
   ]
