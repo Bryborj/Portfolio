@@ -14,8 +14,7 @@ COPY pnpm-workspace.yaml ./
 
 RUN corepack install
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
-    pnpm install --frozen-lockfile
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 COPY . .
 
