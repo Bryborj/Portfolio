@@ -17,10 +17,5 @@
     "ninja-keys": "^1.2.2",
     "thum.io": "^1.0.9",
     "typescript": "^5.3.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
