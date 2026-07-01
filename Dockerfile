@@ -1,12 +1,12 @@
 # ==========================================
 # Stage 1: Build static Astro site
 # ==========================================
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 
 WORKDIR /app
 
-# Enable corepack for pnpm support
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# Install latest pnpm globally via npm (Node 22+ satisfies pnpm v11 requirements)
+RUN npm install -g pnpm
 
 # Copy lockfile and workspace configuration first to leverage Docker layer caching
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
