@@ -8,10 +8,11 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
 RUN corepack enable
-RUN corepack install
 
 COPY package.json pnpm-lock.yaml ./
 COPY pnpm-workspace.yaml ./
+
+RUN corepack install
 
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
     pnpm install --frozen-lockfile
