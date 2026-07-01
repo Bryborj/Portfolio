@@ -1,17 +1,19 @@
-FROM node:20-slim AS base
+FROM node:20-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
-FROM base AS build
+FROM base AS build_server
 COPY . /usr/src/app
 WORKDIR /usr/src/app
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-RUN pnpm run -r build
-RUN pnpm deploy --filter=app1 --prod /prod/app1
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm --filter=server install --frozen-lockfile
+RUN pnpm --filter server run -r build
+RUN pnpm --filter server deploy --prod /prod/server
+RUN cd /prod/server && pnpm prisma:generate
 
-FROM base AS app1
-COPY --from=build /prod/app1 /prod/app1
-WORKDIR /prod/app1
-EXPOSE 8000
+FROM base AS production_server
+ENV NODE_ENV=production
+COPY --from=build_server /prod/server /prod/server
+WORKDIR /prod/server
+EXPOSE 3001
 CMD [ "pnpm", "start" ]
