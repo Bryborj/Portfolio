@@ -1,23 +1,17 @@
 # syntax=docker/dockerfile:1.7
 
-FROM node:24-alpine AS build
-
-WORKDIR /app
-
+FROM node:24-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-
 RUN corepack enable
 
-COPY package.json pnpm-lock.yaml ./
-COPY pnpm-workspace.yaml ./
+FROM base AS build
 
-RUN corepack install
+COPY pnpm-lock.yaml /app
+WORKDIR /app
+RUN pnpm fetch --build
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-
-COPY . .
-
+COPY . /app
 RUN pnpm run build
 
 FROM nginx:alpine
@@ -25,6 +19,6 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 3001
 
 CMD ["nginx", "-g", "daemon off;"]
