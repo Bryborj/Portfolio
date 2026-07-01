@@ -11,7 +11,13 @@ import { getThumURL } from "thum.io";
       projects.map(({ url, description, highlights, name, isActive }) => {
         const thisurl = isActive ? url : "/magnament";
         const previewUrl = isActive
-          ? getThumURL({ url, width: 600, crop: 800, protocol: "https" })
+          ? getThumURL({
+              url,
+              width: 600,
+              crop: 800,
+              protocol: "https",
+              maxAge: 1,
+            })
           : "/preview-placeholder.jpg";
         return (
           <li>
