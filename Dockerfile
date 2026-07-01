@@ -1,38 +1,29 @@
-# ==========================================
-# Stage 1: Build static Astro site
-# ==========================================
-FROM node:22-slim AS build
+# syntax=docker/dockerfile:1.7
+
+FROM node:24-alpine AS build
 
 WORKDIR /app
 
-# Install latest pnpm globally via npm (Node 22+ satisfies pnpm v11 requirements)
-RUN npm install -g pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
-# Copy lockfile and workspace configuration first to leverage Docker layer caching
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN corepack enable
 
-# Install dependencies (fallback to normal install if frozen lockfile fails due to OS/arch differences like musl or arm64)
-RUN pnpm install --frozen-lockfile || pnpm install
+COPY package.json pnpm-lock.yaml ./
+COPY pnpm-workspace.yaml ./
 
-# Copy the rest of the application source code
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+    pnpm install --frozen-lockfile
+
 COPY . .
 
-# Build the Astro site (generates static files in /app/dist)
 RUN pnpm run build
 
-# ==========================================
-# Stage 2: Serve static files with Nginx
-# ==========================================
-FROM nginx:alpine AS runtime
+FROM nginx:alpine
 
-# Copy custom Nginx configuration for clean URLs, routing and caching
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Copy built static files from build stage
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Expose HTTP port
 EXPOSE 80
 
-# Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
