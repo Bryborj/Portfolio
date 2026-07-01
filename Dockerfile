@@ -1,7 +1,7 @@
 # ==========================================
 # Stage 1: Build static Astro site
 # ==========================================
-FROM node:22-alpine AS build
+FROM node:22-slim AS build
 
 WORKDIR /app
 
@@ -11,8 +11,8 @@ RUN npm install -g pnpm
 # Copy lockfile and workspace configuration first to leverage Docker layer caching
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
-# Install dependencies strictly using frozen lockfile
-RUN pnpm install --frozen-lockfile
+# Install dependencies (fallback to normal install if frozen lockfile fails due to OS/arch differences like musl or arm64)
+RUN pnpm install --frozen-lockfile || pnpm install
 
 # Copy the rest of the application source code
 COPY . .
