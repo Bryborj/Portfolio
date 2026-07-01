@@ -14,3 +14,6 @@ minimumReleaseAgeExclude:
   - "@astrojs/compiler-binding@0.3.0"
   - "@astrojs/compiler-rs@0.3.0"
   - astro@7.0.4
+
+allowBuilds:
+  esbuild: true
