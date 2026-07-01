@@ -5,20 +5,17 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
-FROM base AS build
+FROM base AS prod
 
 COPY pnpm-lock.yaml /app
 WORKDIR /app
-RUN pnpm fetch --build
+RUN pnpm fetch --prod
 
 COPY . /app
 RUN pnpm run build
 
-FROM nginx:alpine
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist /usr/share/nginx/html
-
+FROM base
+COPY --from=prod /app/node_modules /app/node_modules
+COPY --from=prod /app/dist /app/dist
 EXPOSE 3001
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD [ "pnpm", "start" ]
