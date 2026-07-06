@@ -222,7 +222,7 @@
       "isActive": true,
       "description": "Visualizador grafico para planes de estudio BUAP. Funciona a travez de un JSON",
       "highlights": ["BUAP", "Hobbie"],
-      "url": "https://vizualizador-plan-de-estudios.vercel.app/"
+      "url": "https://foro-buap.zrootsh.com/"
     },
     {
       "name": "Castores Trucking",

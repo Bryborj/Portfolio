@@ -1,14 +1,13 @@
 ---
-import { basics } from "@cv"
-import SpeedInsights from '@vercel/speed-insights/astro';
+import { basics } from "@cv";
 
 interface Props {
-  title: string
+  title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 
-const { image, summary } = basics
+const { image, summary } = basics;
 ---
 
 <!doctype html>
@@ -23,7 +22,6 @@ const { image, summary } = basics
   </head>
   <body>
     <slot />
-    <SpeedInsights/>
   </body>
 </html>
 
@@ -32,18 +30,27 @@ const { image, summary } = basics
     --bg-color: #000000;
     --text-primary: #f8fafc;
     --text-secondary: #a1a1aa;
-    
+
     /* Favorite colors */
     --accent-blue: #3b82f6;
     --accent-red: #ef4444;
     --accent-purple: #8b5cf6;
-    
+
     --accent: var(--accent-purple);
     --accent-hover: var(--accent-blue);
-    
-    --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-red));
-    --gradient-glow: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
-    
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      var(--accent-blue),
+      var(--accent-purple),
+      var(--accent-red)
+    );
+    --gradient-glow: radial-gradient(
+      circle at center,
+      rgba(139, 92, 246, 0.15) 0%,
+      transparent 70%
+    );
+
     --border-color: transparent;
     --card-bg: #09090b;
     --card-hover: #18181b;
@@ -154,13 +161,13 @@ const { image, summary } = basics
     .no-print {
       display: none !important;
     }
-    
+
     body {
       background: #fff !important;
       color: #000 !important;
       font-size: 12pt;
     }
-    
+
     @page {
       margin: 1cm;
     }

@@ -3,13 +3,15 @@ import Section from "../Section.astro";
 
 import { projects } from "@cv";
 import { getThumURL } from "thum.io";
+
+projects.sort((a, b) => (a.isActive ? 0 : 1) - (b.isActive ? 0 : 1));
 ---
 
 <Section title="Proyectos" id="proyectos">
   <ul>
     {
       projects.map(({ url, description, highlights, name, isActive }) => {
-        const thisurl = isActive ? url : "https://zrootsh.com/magnament";
+        const thisurl = isActive ? url : "https://zrootsh.com/new-404";
         const previewUrl = isActive
           ? getThumURL({
               url,
