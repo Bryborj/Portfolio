@@ -1,10 +1,10 @@
 {
   "basics": {
-    "name": "Bryan Albino Borges",
+    "name": "Bryan A. Borges",
     "label": "Tec. Programación y Est. Ing. Cs. de la Computación @BUAP",
     "image": "/me.webp",
-    "email": "bryanborjes@outlook.com",
-    "phone": "+52 2202139508",
+    "email": "root.brybor.dev+contactme@gmail.com",
+    "phone": "+52 2491005317",
     "url": "https://facebook.com/brybor.sh",
     "summary": "Con poca experiencia en el desarrollo de aplicaciones web, pero con muchas ganas de aprender y crecer en el área. Buscando una oportunidad para demostrar mis habilidades y contribuir a un equipo de trabajo.",
     "location": {
@@ -131,16 +131,6 @@
       "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
-      "name": "Express.js",
-      "level": "Medium",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "CSS Framework",
-        "Diseño Responsive"
-      ]
-    },
-    {
       "name": "Git",
       "level": "Medium",
       "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
@@ -156,7 +146,7 @@
       "keywords": ["Base de Datos", "NoSQL"]
     },
     {
-      "name": "MySQL",
+      "name": "PostgreSQL",
       "level": "Medium",
       "keywords": ["Base de Datos", "SQL"]
     },
@@ -167,6 +157,11 @@
     },
     {
       "name": "Vercel",
+      "level": "Medium",
+      "keywords": ["Despliegue", "Hosting"]
+    },
+    {
+      "name": "VPS",
       "level": "Medium",
       "keywords": ["Despliegue", "Hosting"]
     }
@@ -206,7 +201,7 @@
       "isActive": true,
       "description": "Portafolio personal con información sobre mí y mis proyectos.",
       "highlights": ["Portafolio", "Curriculum", "Preview"],
-      "url": "https://zona-sh-portfolio.vercel.app/"
+      "url": "https://zrootsh.com/"
     },
     {
       "name": "My Mind",
@@ -217,7 +212,7 @@
     },
     {
       "name": "Semi-Code Analyser",
-      "isActive": true,
+      "isActive": false,
       "description": "Pagina web para visualizar las estructura basica de los semicondictores a partir de los elementos somo Si y Boro.",
       "highlights": ["Fisica", "Circuitos Electronicos", "BUAP"],
       "url": "https://semi-code-analyzer.vercel.app/"
