@@ -230,6 +230,13 @@
       "description": "VTC Mexiana de Trukers MP, pagina web para el enfasis de la empresa virtual de camiones del videojuego ATS y ETS2",
       "highlights": ["ETS2", "ATS", "VTuber"],
       "url": "https://castorestrucking.com.mx"
+    },
+    {
+      "name": "Antigravity IDE - BUILDER rpm",
+      "isActive": true,
+      "description": "Editor de codigo con soporte para RPM. Este proyecto nace a partir de que Google Antigravity no proporciona instaladores rpm para RHEL y derivados.",
+      "highlights": ["IDE", "RPM", "ZrootSH Solutions"],
+      "url": "https://antigravity.zrootsh.com/"
     }
   ]
 }
